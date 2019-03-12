@@ -168,4 +168,74 @@ To https://github.com/hieuthien95/demo-repo.git
  * [new branch]      branch_demo_tags -> branch_demo_tags
 ```
 
+# (XIII) Branch, Merge branch và xử lý Conlicts
+## 1. Branch
+**List Branch**
+```
+$ git branch
+  branch_demo_tags
+  master
+* testing_br
+```
+**Thêm Branch**
+```
+$ git branch "ten_branch"
+```
+**Swich Branch**
+```
+$ git checkout ten_branch
+Switched to branch 'ten_branch'
+```
 
+## 2. Merge branch
+```
+$ git merge branch_2_name
+```
+```
+$ git branch
+  branch_demo_tags
+  master
+* testing_br
+
+$ git checkout master
+Switched to branch 'master'
+
+$ git merge testing_br
+Already up to date.
+
+$ git push --set-upstream thien-remote testing_br
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'testing_br' on GitHub by visiting:
+remote:      https://github.com/hieuthien95/demo-repo/pull/new/testing_br
+remote:
+To https://github.com/hieuthien95/demo-repo.git
+ * [new branch]      testing_br -> testing_br
+Branch 'testing_br' set up to track remote branch 'testing_br' from 'thien-remote'.
+```
+
+## 3. Xử lý Conlicts
+```
+$   git config --global diff.tool bc
+$   git config --global difftool.bc.path "C:\Program Files (x86)\Beyond Compare 3\BCompare.exe"
+
+$   git config --global merge.tool bc
+$   git config --global mergetool.bc.path "C:\Program Files (x86)\Beyond Compare 3\BCompare.exe"
+
+$ git pull
+
+$ git merge origin/testing_br
+Auto-merging ReadMe - Copy.txt
+CONFLICT (content): Merge conflict in ReadMe - Copy.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git mergetool
+Merging:
+ReadMe - Copy.txt
+
+Normal merge conflict for 'ReadMe - Copy.txt':
+  {local}: modified file
+  {remote}: modified file
+ReadMe - Copy.txt seems unchanged.
+Was the merge successful [y/n]?
+```
