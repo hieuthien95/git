@@ -271,7 +271,7 @@ Changes to be committed:
         renamed:    ReadMe.txt -> abc/ReadMe.txt  
 ```
 
-# (VII) Week 7: Xem lịch sử commit
+# (VIII) Week 7: Xem lịch sử commit
 _Thoát git log thì bấm Q_
 ```
 $ git log -p -2
