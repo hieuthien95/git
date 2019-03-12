@@ -146,42 +146,55 @@ To https://github.com/hieuthien95/demo-repo.git
 ```
 # (VI) Week 6
 1. Checking the Status of file
-   ```$ git status```
+   ```
+   $ git status
+   ```
 2. Tracking new files (staging)
-   ```$ git add file_name```
+   ```
+   $ git add file_name
+   ```
 3. Staging Modified files
-   ```$ git status```
+   ```
+   $ git status
+   ```
 4. Short status
-   ```$ git status -s
-   $ git status --short```
+   ```
+   $ git status -s
+   $ git status --short
+   ```
 5. Ignoring files: https://github.com/github/gitignore
-   ```$ touch .gitignore```
+   ```
+   $ touch .gitignore
+   ```
 6. Viewing Staged and Unstaged changes: khi 1 file đã staged, mà có thêm chỉnh sửa
-   ```$ git diff
-   $ git diff --staged```
+   ```
+   $ git diff
+   $ git diff --staged
+   ```
 7. Committing you changes
-   ```$ git commit -m "message..."
-   $ git commit       // de open editor```
+   ```
+   $ git commit -m "message..."
+   $ git commit       // de open editor
+   ```
 8. Skipping the Staging area
-   ```$ git add .
+   ```
+   $ git add .
    $ git add -a
-   $ git add --all```
+   $ git add --all
+   ```
 9. Removing file
-   ```$ git rm --cached <file>...```
+   ```
+   $ git rm --cached <file>...
+   ```
 10. Moving file: rename
-   ```$ git mv ReadMe.txt ReadMe.md```
-
-Untracked		Unmodified 			Modified		Staged
-
-	[add the file----------------------------->
-	
-					        [edit file-->
-					
-									            [stage file--->
-									
-	<remove file----]
-	
-					        <-------------------commit]
+   ```
+   $ git mv ReadMe.txt ReadMe.md
+   ```
+. git add: 	Untracked 		   -->			Staged
+. edit file: 			Unmodified --> Modified
+. git add: 				       Modified   --> 	Staged
+. xóa file: 	Untracked  <--	Unmodified 
+. git commit: 	Unmodified		   <--			Staged
           
 ```
 $ git init
