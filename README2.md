@@ -186,6 +186,11 @@ $ git branch "ten_branch"
 $ git checkout ten_branch
 Switched to branch 'ten_branch'
 ```
+**Xem commit mới nhất của mỗi Branch**
+```
+$ git branch -v
+* master 723f0e8 dđ
+```
 
 ## 2. Merge branch
 ```
@@ -221,7 +226,8 @@ $   git config --global difftool.bc.path "C:\Program Files (x86)\Beyond Compare 
 
 $   git config --global merge.tool bc
 $   git config --global mergetool.bc.path "C:\Program Files (x86)\Beyond Compare 3\BCompare.exe"
-
+```
+```
 $ git pull
 
 $ git merge origin/testing_br
