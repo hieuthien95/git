@@ -338,5 +338,8 @@ _chỉ file chưa add_
 ```
 $ git checkout -- realme.txt
 ```
+```
+$ git reset --hard
+```
 
 
