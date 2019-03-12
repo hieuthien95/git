@@ -190,11 +190,11 @@ To https://github.com/hieuthien95/demo-repo.git
    ```
    $ git mv ReadMe.txt ReadMe.md
    ```
-. git add: 	Untracked 		   -->			Staged
-. edit file: 			Unmodified --> Modified
-. git add: 				       Modified   --> 	Staged
-. xóa file: 	Untracked  <--	Unmodified 
-. git commit: 	Unmodified		   <--			Staged
++ $ git add:    Untracked --> Staged
++ edit file:    Unmodified --> Modified
++ $ git add:    Modified --> Staged
++ xóa file:     Untracked <--	Unmodified 
++ $ git commit:	Unmodified <-- Staged
           
 ```
 $ git init
