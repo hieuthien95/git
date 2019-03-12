@@ -144,7 +144,7 @@ To https://github.com/hieuthien95/demo-repo.git
    f6d8073..79e9f73  master -> master
 
 ```
-# (VI) Week 6
+# (VI) Week 6: Quản lý sự thay đổi của repo
 1. Checking the Status of file
    ```
    $ git status
@@ -269,6 +269,68 @@ Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
         renamed:    ReadMe.txt -> abc/ReadMe.txt  
+```
+
+# (VII) Week 7: Xem lịch sử commit
+_Thoát git log thì bấm Q_
+```
+$ git log -p -2
+$ git log --stat
+$ git log --pretty=oneline
+$ git log --pretty=format:"%h - %an, %ar : %s" 
+$ git log --since=2.week
+$ git log --pretty="%h - %s" --author=hieuthien --since="2019-03-10"
+```
+
+# (VII) Week 8: Hũy bỏ sự thay đổi trong thư mục làm việc
+## 1. Tiếp tục commit đè lên commit củ
+```
+$ git add .
+$ git commit -m "first commit"
+$ git commit --amend
+```
+## 2. Khi đã add (staged), chuyển thành unstage
+```
+$ git reset HEAD <file>...
+```
+```
+hieut@DESKTOP-M6CBJL7 MINGW64 ~/Desktop/git-place/week 7/mongo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   realme - Copy (2).txt
+        new file:   realme - Copy.txt
+        modified:   realme.txt
+
+$ git reset HEAD "realme - Copy (2).txt" "realme - Copy.txt"
+
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   realme.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        realme - Copy (2).txt
+        realme - Copy.txt
+
+```
+
+## 3. revert lại trạng thái commit trước kia
+_chỉ file chưa add_
+```
+$ git checkout -- realme.txt
 ```
 
 
