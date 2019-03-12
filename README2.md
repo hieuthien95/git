@@ -3,7 +3,8 @@
    ```
    $ git remote
    origin
-   
+   ```
+   ```
    $ git remote -v
    origin  https://github.com/hieuthien95/demo-repo.git (fetch)
    origin  https://github.com/hieuthien95/demo-repo.git (push)
@@ -15,6 +16,8 @@
 3. Fetching an Pull from Remotes
    ```
    $ git fetch thien-remote
+   ```
+   ```
    $ git pull thien-remote
    ```
 4. Push to Remote: sẽ push data dưới repo local lên repo remote
@@ -27,11 +30,12 @@
    ```
 6. Remove and Rename Remotes
    ```
+   $ git remote rm ten-remote
+   ```
+   ```
    $ git remote rename thien-remote tenmoi
    $ git remote
    tenmoi
-
-   $ git remote rm ten-remote
    ```
 
 ## 2. Add remote Repo:
@@ -64,7 +68,11 @@ $ git pull thien-remote master --allow-unrelated-histories
 1. List Tags
    ```
    $git tag
+   ```
+   ```
    $git tag -l "v.1.0.*"
+   ```
+   ```
    $ git ls-remote --tag thien-remote
    ```
 2. Annotated Tags
@@ -82,6 +90,8 @@ $ git pull thien-remote master --allow-unrelated-histories
 5. Sharing Tags
    ```
    $ git push remote_name v1.0
+   ```
+   ```
    $ git push remote_name --tags
    ```
 6. Checkout Tags
