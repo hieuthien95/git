@@ -186,11 +186,6 @@ $ git branch "ten_branch"
 $ git checkout ten_branch
 Switched to branch 'ten_branch'
 ```
-**Xem commit mới nhất của mỗi Branch**
-```
-$ git branch -v
-* master 723f0e8 dđ
-```
 
 ## 2. Merge branch
 ```
@@ -245,3 +240,28 @@ Normal merge conflict for 'ReadMe - Copy.txt':
 ReadMe - Copy.txt seems unchanged.
 Was the merge successful [y/n]?
 ```
+
+# (XIV) Quản lý nhánh
+```
+$ git branch
+  branch_demo_tags
+  master
+* testing_br
+```
+**Xem commit mới nhất của mỗi Branch**
+```
+$ git branch -v
+* master 723f0e8 dđ
+```
+```
+$ git branch --merged
+  branch_demo_tags
+  master
+* testing_br
+
+$ git branch --no-merged
+```
+```
+$ git branch -d branch_name
+```
+
