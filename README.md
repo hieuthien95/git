@@ -10,11 +10,13 @@ ThienBH
 $ git config --global user.email "hieuthien95@gmail.com"
 $ git config --global user.email
 hieuthien95@gmail.com
-
+```
+```
 $ git config --global core.editor "'E:\Soft\extract\nodepad++\notepad++.exe' -multiInst -nosession"
 $ git config --global core.editor
 'E:\Soft\extract\nodepad++\notepad++.exe' - multiInst -nosession
-
+```
+```
 $ git config --list
 core.symlinks=false
 core.autocrlf=true
@@ -169,11 +171,15 @@ To https://github.com/hieuthien95/demo-repo.git
 6. Viewing Staged and Unstaged changes: khi 1 file đã staged, mà có thêm chỉnh sửa
    ```
    $ git diff
+   ```
+   ```
    $ git diff --staged
    ```
 7. Committing you changes
    ```
    $ git commit -m "message..."
+   ```
+   ```
    $ git commit       // de open editor
    ```
 8. Skipping the Staging area
