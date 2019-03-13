@@ -39,7 +39,7 @@
    ```
 
 ## 2. Add remote Repo:
-__Khi đã có repo local, muốn add vào repo remote khac__
+_Khi đã có repo local, muốn add vào repo remote khac_
 ```
 $ git remote add thien-remote https://github.com/hieuthien95/demo-repo.git
 $ git remote
@@ -241,14 +241,14 @@ ReadMe - Copy.txt seems unchanged.
 Was the merge successful [y/n]?
 ```
 
-# (XIV) Quản lý nhánh
+# (XIV) Quản lý nhánh local
 ```
 $ git branch
   branch_demo_tags
   master
 * testing_br
 ```
-**Xem commit mới nhất của mỗi Branch**
+_Xem commit mới nhất của mỗi Branch_
 ```
 $ git branch -v
 * master 723f0e8 dđ
@@ -261,7 +261,41 @@ $ git branch --merged
 
 $ git branch --no-merged
 ```
+_Xóa branch local_
 ```
 $ git branch -d branch_name
 ```
 
+# (XVI) Làm việc với branch trên remote
+_Liệt kê các branche/tags_
+```
+$ git ls-remote thien-remote
+$ git remote show thien-remote
+
+$ git ls-remote
+From https://github.com/hieuthien95/demo-repo.git
+a5d67efbd8646e353734916b8163dbedf273271b        HEAD
+2de1baec913a89efe1ab9a80f75dcb6f4d2386ce        refs/heads/branch_demo_tags
+a5d67efbd8646e353734916b8163dbedf273271b        refs/heads/master
+ad8848bc69cd61c065b4afcb85cc954c6f948519        refs/heads/testing_br
+ce2fc49fd06e65e03b796454596f313e5a9556d2        refs/tags/v1.0
+2de1baec913a89efe1ab9a80f75dcb6f4d2386ce        refs/tags/v1.0^{}
+```
+_Xóa branch_
+```
+$ git push origin --delete branch_demo_tags
+To https://github.com/hieuthien95/demo-repo.git
+ - [deleted]         branch_demo_tags
+```
+_config khi lam qua https_
+```
+$ git config --global credential.helper cache
+```
+_checkout 1 nhánh từ remote về local_
+```
+$ git checkout -b thien-remote/testing_br
+Switched to a new branch 'thien-remote/testing_br'
+```
+```
+$ git branch -vv
+```
