@@ -175,6 +175,19 @@ To https://github.com/hieuthien95/demo-repo.git
    ```
    $ git diff --staged
    ```
+   ```
+   //  compare the working directory with local repository.
+   $ git diff HEAD [filename]
+
+   // compare the working directory with index.
+   $ git diff [filename]
+
+   // compare the index with local repository.
+   $ git diff --cached [filename]
+   ```
+   ```
+   $ git diff 7eb2..e03 812...a3f35
+   ```
 7. Committing you changes
    ```
    $ git commit -m "message..."
