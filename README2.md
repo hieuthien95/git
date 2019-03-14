@@ -181,6 +181,9 @@ $ git branch
 ```
 $ git branch "ten_branch"
 ```
+```
+git checkout -b feature_branch_name
+```
 **Swich Branch**
 ```
 $ git checkout ten_branch
@@ -239,6 +242,11 @@ Normal merge conflict for 'ReadMe - Copy.txt':
   {remote}: modified file
 ReadMe - Copy.txt seems unchanged.
 Was the merge successful [y/n]?
+```
+
+## 4. Push branch lên remote
+```
+git push -u origin feature_branch_name
 ```
 
 # (XIV) Quản lý nhánh local
