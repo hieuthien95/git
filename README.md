@@ -350,6 +350,8 @@ Untracked files:
 _chỉ file chưa add_
 ```
 $ git checkout -- realme.txt
+
+$ git checkout <commit_hash> -- <file>
 ```
 ```
 $ git reset --hard
