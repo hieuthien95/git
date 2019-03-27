@@ -295,15 +295,16 @@ $ git push origin --delete branch_demo_tags
 To https://github.com/hieuthien95/demo-repo.git
  - [deleted]         branch_demo_tags
 ```
-_config khi lam qua https_
-```
-$ git config --global credential.helper cache
-```
-_checkout 1 nhánh từ remote về local_
+_checkout 1 branch từ remote về local_
 ```
 $ git checkout -b thien-remote/testing_br
 Switched to a new branch 'thien-remote/testing_br'
 ```
 ```
 $ git branch -vv
+```
+# NOTE: git config --global credential.helper cache
+_config khi lam qua https_
+```
+$ git config --global credential.helper cache
 ```
