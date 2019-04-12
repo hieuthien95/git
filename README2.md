@@ -308,3 +308,22 @@ _config khi lam qua https_
 ```
 $ git config --global credential.helper cache
 ```
+
+# Merge stg to local
+### Step 1. Fetch and check out the branch for this merge request
+```
+git fetch origin
+git checkout -b stg origin/stg
+```
+### Step 2. Review the changes locally
+
+### Step 3. Merge the branch and fix any conflicts that come up
+```
+git fetch origin
+git checkout origin/thien_local
+git merge --no-ff stg
+```
+### Step 4. Push the result of the merge to GitLab
+```
+git push origin thien_local
+```
