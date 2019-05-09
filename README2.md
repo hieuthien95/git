@@ -193,6 +193,7 @@ Switched to branch 'ten_branch'
 ## 2. Merge branch
 ```
 $ git merge branch_2_name
+$ git merge branch_2_name --no-commit
 ```
 ```
 $ git branch
