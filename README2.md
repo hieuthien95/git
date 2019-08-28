@@ -328,3 +328,16 @@ git merge --no-ff stg
 ```
 git push origin thien_local
 ```
+
+# Stash
+```
+git stash
+```
+
+```
+git stash list
+```
+
+```
+git stash apply --index
+```
