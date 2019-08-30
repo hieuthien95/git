@@ -359,5 +359,7 @@ $ git reset --hard
 
 # NOTE
 ```
+env GIT_TERMINAL_PROMPT=1 go mod vendor
 env GIT_TERMINAL_PROMPT=1 go get gitlab.ghn.vn/common-projects/go-sdk v0.1.31
+...
 ```
