@@ -363,3 +363,7 @@ env GIT_TERMINAL_PROMPT=1 go mod vendor
 env GIT_TERMINAL_PROMPT=1 go get gitlab.ghn.vn/common-projects/go-sdk v0.1.31
 ...
 ```
+
+```
+git config --global --add url."https://thuocsi.<name>@gitlab.com/thuocsi".insteadOf "https://gitlab.com/thuocsi"
+```
