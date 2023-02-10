@@ -357,6 +357,15 @@ $ git checkout <commit_hash> -- <file>
 $ git reset --hard
 ```
 
+## 4. merge code từ 1 repo khác
+```
+    cd path/to/project-b
+    git remote add project-a /path/to/project-a
+    git fetch project-a --tags
+    git merge --allow-unrelated-histories project-a/prd
+    // git remote remove project-a
+```
+
 # NOTE
 ```
 env GIT_TERMINAL_PROMPT=1 go mod vendor
